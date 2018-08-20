@@ -1,0 +1,98 @@
+---
+title: "Untitled"
+author: "Christian Tillich"
+email: "christian.tillich.walker@gmail.com"
+date: "July 25, 2018"
+output: pdf_document
+header-includes: 
+- \usepackage{multicol}
+- \def\begincols{\begin{columns}}
+- \def\begincol{\begin{column}}
+- \def\endcol{\end{column}}
+- \def\endcols{\end{columns}}
+---
+
+# Skills
+
+
+\begin{minipage}[t]{.45\textwidth} 
+\hfill Modeling/Math \hfill \break \break \raggedright
+Strong: Linear/Logistic Regression, GLMNet, Decision Trees, Random Forest, Gradient-Boosted Models, Clustering \break \break
+Some Exposure: Time Series, Neural Nets, Markov Models, Nonlinear Optimmization, Multivariate Statistics, Path Analysis, Other Data Mining  
+\end{minipage}
+\begin{minipage}[t]{.10\textwidth} 
+\hfill
+\end{minipage}
+\begin{minipage}[t]{.45\textwidth} 
+\hfill Programming/Tools \hfill \break \break \raggedright
+Strong: R, Markdown, Git, SQL (PostGres + Hive), Excel (+VBA)  \break \break
+Some Exposure: Bash Scripting, Python, Matlab, Mathematica, SAS, \LaTeX  
+\end{minipage}
+
+# Work Experience
+
+## Avant Credit \hfill Data Science \hfill Jun 2016 - Present
+
+* Constructed key underwriting models for the portfolio.
+* Monitored models performance for degradation, suggested remedies and rebuilds.
+* Developed a marketing segmentation model using unsupervised learning methods.
+* Built, documented, and maintained a shared automated reporting toolset for the team. 
+* Built, documented, and maintained a tool for managing data preprocessing.
+* Contributed to a repository of shared functions and tests.
+
+## Avant Credit \hfill Business Analytics \hfill Sep 2015 - Jun 2016
+
+* Designed critical long-term risk forecasting tool.
+    * Linear regression to turn unintuitive underwriting score into sensible 12-month risk metric 
+    * Custom curve-fitting optimization to map 12-month risk to marginal risk curve over life of loan.
+    * Tool accurately forecast losses during a period of high risk and low access to capital.
+* Performed investigative data analysis on several topics.
+    * Optimal way to quantify debt to income. 
+    * Reverse engineering competitive products from credit report tradelines. 
+
+## Enova Financial \hfill Research & Platforms \hfill Dec 2014 - Sep 2015
+
+* Researched the efficacy of non-linear modeling strategies. 
+* Developed unsupervised learning model to tag call center notes on a variety of topics.
+* Designed and maintained core analytics Data Mart. 
+* Evaluated the efficacy of voice-to-text translation software for call center.
+
+## Enova Financial \hfill UK Business Analytics \hfill Jan 2014 - Dec 2015
+
+* Designed profit-maximizing loan amount optimization tool. Raised average loan amounts by $60 and expected net return by 7%. 
+* Led all analytics efforts in major legal overhaul. Salvaged $5 million in above worst-case scenarios. 
+
+## Enova Financial \hfill CA/AU Business Analytics \hfill Aug 2010 - Jan 2014
+
+* Identified and fixed key failures of underwriting engine. 
+* Created LTV calculator used to optimize digital marketing allocations. 
+* Informally managed team of 2-5 analysts working on different aspects of the underwriting engine. 
+* Identified and shut down *ad hoc* fraud pockets on the two products. 
+
+## Enova Financial \hfill Fraud/Operations Analyst \hfill jun 2008 - Aug 2010
+
+* Developed critical reports that allowed us to open operations after massive fraud attack. 
+* Wrote and implemented a number of consistency checks to catch operational/development errors and report back to stakeholders. 
+
+# Education
+
+## DePaul University \hfill MS Statistics \hfill 2012 - 2015
+GPA: 3.9
+
+## University of Illinois - UC \hfill BA Physics \hfill 2004 - 2008
+Minor in Philosophy
+GPA: 3.6
+
+
+# Academic Research
+
+## Research Assistant \hfill Granato Research Team \hfill Sep 2006 - Sep 2007
+
+* Prepared samples for experiments. 
+* Prepared preliminary findings for NSF grant proposals.
+
+## Research Assistant \hfill CERI Research Team \hfill May 2006 - Aug 2006
+
+* Wrote Matlab scripts to determine theoretical surface depth from excessive loading. 
+* Wrote Unix shell-scripting to ETL raw GPS data into usable Matlab objects. 
+* Presented research to peers at 2 day conference in Oregon. 
