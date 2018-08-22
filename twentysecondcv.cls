@@ -31,9 +31,10 @@
 
 \definecolor{white}{RGB}{255,255,255}
 \definecolor{gray}{HTML}{4D4D4D}
-\definecolor{sidecolor}{HTML}{E7E7E7}
+\definecolor{sidecolor}{HTML}{e3f2fc}
 \definecolor{mainblue}{HTML}{0E5484}
 \definecolor{maingray}{HTML}{B9B9B9}
+\definecolor{lightblue}{HTML}{e3f2fc}
 
 %----------------------------------------------------------------------------------------
 %	 MISC CONFIGURATIONS
@@ -132,7 +133,7 @@
 
 		%------------------------------------------------
 
-		{\Huge\color{mainblue}\cvname}
+		{\huge\color{mainblue}\cvname\vskip 0.1cm}
 
 		%------------------------------------------------
 
@@ -141,12 +142,12 @@
 		%------------------------------------------------
 
 		\renewcommand{\arraystretch}{1.6}
-		\begin{tabular}{p{0.5cm} @{\hskip 0.5cm}p{5cm}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\Large\icon{\Info}} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \cvsite\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large\icon{@}} & \href{mailto:\cvmail}{\cvmail}}
+		\begin{tabular}{p{0.5cm} @{\hskip 0.1cm}p{5cm}}
+			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\large \Info} & \cvdate\\}
+			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large \Letter} & \cvaddress\\}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\large \Telefon} & \cvnumberphone\\}
+			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large \Mundus} & \cvsite\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \href{mailto:\cvmail}{\cvmail}}
 		\end{tabular}
 
 		%------------------------------------------------
@@ -181,42 +182,49 @@
 %	 COLOURED SECTION TITLE BOX
 %----------------------------------------------------------------------------------------
 
-% Command to create the rounded boxes around the first three letters of section titles
+%% Command to create the rounded boxes around the first three letters of section titles
 \newcommand*\round[2]{%
 	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 }
+%
+%\newcounter{colorCounter}
+%\newcommand{\sectioncolor}[1]{%
+%	{%
+%		\round{#1}{
+%			\ifcase\value{colorCounter}%
+%			maingray\or%
+%			mainblue\or%
+%			maingray\or%
+%			mainblue\or%
+%			maingray\or%
+%			mainblue\or%
+%			maingray\or%
+%			mainblue\or%
+% 			maingray\or%
+%			mainblue\else%
+%			maingray\fi%
+%		}%
+%	}%
+%	\stepcounter{colorCounter}%
+%}
 
-\newcounter{colorCounter}
-\newcommand{\sectioncolor}[1]{%
-	{%
-		\round{#1}{
-			\ifcase\value{colorCounter}%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
-			maingray\or%
-			mainblue\or%
- 			maingray\or%
-			mainblue\else%
-			maingray\fi%
-		}%
-	}%
-	\stepcounter{colorCounter}%
-}
-
+\newcounter{sectionCounter}
 \renewcommand{\section}[1]{
+	\ifcase\value{sectionCounter} 
+	\else
+		\par\vspace{5\parskip}
+	\fi
 	{%
-		\color{gray}%
-		\Large\sectioncolor{#1}%
+		\huge\color{mainblue} #1%
 	}
+   	\vspace{0.3ex}
+	{\color{maingray}\hrule height 0.3ex}
+    \stepcounter{sectionCounter}
 }
 
 \renewcommand{\subsection}[1]{
-	\par\vspace{.5\parskip}{%
-		\large\color{gray} #1%
+	\par\vspace{3\parskip}{%
+		\large\color{mainblue} #1%
 	}
-	\par\vspace{.25\parskip}%
+	\par\vspace{0.5\parskip}%
 }
