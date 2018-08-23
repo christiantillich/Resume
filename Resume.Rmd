@@ -7,12 +7,15 @@ address: "Chicago, Il."
 phone: "847-863-7162"
 website: "github/christiantillich"
 email: "christian.tillich.walker@gmail.com"
-skills:
+statistics:
+  - {name: Linear Regression, score: 5}
+  - {name: Multivariate Methods, score: 3} 
+programming:
   - {name: R, score: 1}
   - {name: Python, score: 2}
 output: 
   pdf_document:
-    keep_tex: TRUE
+    # keep_tex: TRUE
     template: latex/template.tex
 geometry: 
  # - left=7.6cm 

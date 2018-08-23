@@ -76,8 +76,11 @@
 	\addtolength\TotalSectionLength{-\SectionTitleLength}% Subtract the section title width from the total width
 	\addtolength\TotalSectionLength{-2.22221pt}% Modifier to remove overfull box warning
 	\vspace{8pt}% Whitespace before the section title
-	{\color{black!80} \huge #1 \rule[0.15\baselineskip]{\TotalSectionLength}{1pt}}% Print the title and auto-width rule
+	{\color{mainblue} \huge #1 \vspace{0.3ex} {\color{maingray}\hrule height 0.1ex}}% Print the title and auto-width rule
 }
+
+%\vspace{0.3ex}
+%	{\color{maingray}\hrule height 0.3ex}
 
 \newdimen\test \setlength{\test}{\dimexpr \geometryprop{lmargin}} %Define the left margin length so we can make everything relative to it
 \newdimen\other \setlength{\other}{0.10\test}
@@ -97,10 +100,21 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
-\newcommand\skillwidth{0.9\lmargin}
+\newcommand\skillwidth{0.85\lmargin}
 \newcommand\skillheight{0.2}
-\newcommand\skills[1]{ 
-	\renewcommand{\skills}{
+\newcommand\statistics[1]{ 
+	\renewcommand{\statistics}{
+		\begin{tikzpicture}
+			\foreach [count=\i] \x/\y in {#1}{
+				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y*\skillwidth/6,\i+\skillheight);
+				\node [above right] at (0,\i+\skillheight) {\x};
+			}
+		\end{tikzpicture}
+	}
+}
+\newcommand\programming[1]{ 
+	\renewcommand{\programming}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
@@ -141,7 +155,7 @@
 
 	%------------------------------------------------
 
-	\begin{textblock}{0.9}(0.05, 0.1)
+	\begin{textblock}{0.85}(0.05, 0.1)
 			
 		%------------------------------------------------
 		\vskip \tmargin
@@ -185,11 +199,13 @@
 
 		%------------------------------------------------
 
-		\profilesection{Skills}
-		
-		\skills
-		\skillstext
-		\tiny The skill scale is from 0 (Fundamental Awareness) to 6 (Expert)
+		\profilesection{Statistics}
+		\statistics
+
+		\profilesection{Programming}
+      	\programming
+
+		\footnotesize The skill scale is from 0 (Fundamental Awareness) to 6 (Expert)
 		
 			
 		%------------------------------------------------
