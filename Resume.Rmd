@@ -8,11 +8,21 @@ phone: "847-863-7162"
 website: "github/christiantillich"
 email: "christian.tillich.walker@gmail.com"
 statistics:
-  - {name: Linear Regression, score: 5}
-  - {name: Multivariate Methods, score: 3} 
+  - {name: "`General Stats & Opt`", score: 4}
+  - {name: "`Bayesian Statistics`", score: 2}
+  - {name: "`Factor/Path Analysis/Markov`", score: 3}
+  - {name: "`Clustering`", score: 4}
+  - {name: "`Tree Methods - RF & XGB`", score: 5}
+  - {name: "`Linear/Logistic/GLMNet`", score: 6}
 programming:
-  - {name: R, score: 1}
-  - {name: Python, score: 2}
+  - {name: "`MatLab/Mathematica/Other`", score: 2}
+  - {name: "`Excel (+ Solver + VBA)`", score: 3}
+  - {name: "`Git`", score: 3}
+  - {name: "`SQL (Postgres & Hive)`", score: 4}
+  - {name: "`SAS/Python`", score: 2}
+  - {name: "`Rmd & LaTeX`", score: 4}
+  - {name: "`R`", score: 5}
+  
 output: 
   pdf_document:
     # keep_tex: TRUE
@@ -56,7 +66,7 @@ geometry:
 * Built, documented, and maintained a tool for managing data preprocessing.
 * Contributed to a repository of shared functions and tests.
 
-## Avant Credit \hfill Business Analytic
+## Avant Credit \hfill Business Analytics \hfill Sep 2015 - June 2016
 
 * Designed critical long-term risk forecasting tool.
     * Linear regression to turn unintuitive underwriting score into sensible 12-month risk metric 
@@ -84,6 +94,8 @@ geometry:
 * Created LTV calculator used to optimize digital marketing allocations. 
 * Informally managed team of 2-5 analysts working on different aspects of the underwriting engine. 
 * Identified and shut down *ad hoc* fraud pockets on the two products. 
+
+\newpage \makeprofile
 
 ## Enova Financial \hfill Fraud/Operations Analyst \hfill jun 2008 - Aug 2010
 
