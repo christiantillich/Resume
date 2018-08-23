@@ -1,28 +1,29 @@
 ---
-header-includes: | 
-  \cvname{Christian Tillich}
-  \cvjobtitle{Data Scientist}
-  \cvdate{} 
-  \cvaddress{Chicago, Il.}
-  \cvnumberphone{(847) 863-7162} 
-  \cvsite{https://github.com/christiantillich}
-  \cvmail{christian.tillich.walker@gmail.com} 
-  \profilepic{}
+picture:  pics/test.jpg
+name: "Christian Tillich"
+occupation: "Data Science"
+birthdate: June 1986
+address: "Chicago, Il."
+phone: "847-863-7162"
+website: "github/christiantillich"
+email: "christian.tillich.walker@gmail.com"
+skills:
+  - {name: R, score: 1}
+  - {name: Python, score: 2}
 output: 
   pdf_document:
-    # keep_tex: TRUE
-    includes:
-      before_body: latex/prefix.tex
+    keep_tex: TRUE
+    template: latex/template.tex
 geometry: 
- - left=7.6cm 
- - top=0.1cm 
- - right=1cm
- - bottom=0.2cm 
+ # - left=7.6cm 
+ - left = 6.3cm
+ - top = 0.5cm 
+ - right = 1cm
+ - bottom = 0.2cm 
  - nohead 
  - nofoot
-documentclass: twentysecondcv
-classoption: letterpaper
 ---
+
 
 
 
@@ -52,7 +53,7 @@ classoption: letterpaper
 * Built, documented, and maintained a tool for managing data preprocessing.
 * Contributed to a repository of shared functions and tests.
 
-## Avant Credit \hfill Business Analytics \hfill Sep 2015 - Jun 2016
+## Avant Credit \hfill Business Analytic
 
 * Designed critical long-term risk forecasting tool.
     * Linear regression to turn unintuitive underwriting score into sensible 12-month risk metric 

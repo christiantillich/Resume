@@ -21,9 +21,12 @@
 \RequirePackage{pgffor}
 \RequirePackage{marvosym}
 \RequirePackage{parskip}
+\RequirePackage{geometry}
+\RequirePackage{hyperref}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
+
 
 %----------------------------------------------------------------------------------------
 %	 COLOURS
@@ -46,16 +49,23 @@
 
 \setlength{\parindent}{0pt} % Disable paragraph indentation
 
+\newcommand{\geometryprop}[1]{\csname Gm@#1\endcsname} %Gets an arbitrary geometry property
+
 %----------------------------------------------------------------------------------------
 %	 SIDEBAR DEFINITIONS
 %----------------------------------------------------------------------------------------
 
-\setlength{\TPHorizModule}{1cm} % Left margin
-\setlength{\TPVertModule}{1cm} % Top margin
+
+
+\newdimen\lmargin \setlength{\lmargin}{0.9\dimexpr\geometryprop{lmargin}} %Reads in total sidebar length from .Rmd
+\newdimen\tmargin \setlength{\tmargin}{\dimexpr \geometryprop{tmargin}} %Reads in top margin from .Rmd
+\setlength{\TPHorizModule}{\lmargin} % Left margin
+\setlength{\TPVertModule}{\tmargin} % Top margin
+%\oddsidemargin = 0.5cm
 
 \newlength\imagewidth
 \newlength\imagescale
-\pgfmathsetlength{\imagewidth}{5cm}
+\pgfmathsetlength{\imagewidth}{0.75\lmargin}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
 \newlength{\TotalSectionLength} % Define a new length to hold the remaining line width after the section title is printed
@@ -69,13 +79,16 @@
 	{\color{black!80} \huge #1 \rule[0.15\baselineskip]{\TotalSectionLength}{1pt}}% Print the title and auto-width rule
 }
 
+\newdimen\test \setlength{\test}{\dimexpr \geometryprop{lmargin}} %Define the left margin length so we can make everything relative to it
+\newdimen\other \setlength{\other}{0.10\test}
+
 % Define custom commands for CV info
 \newcommand{\cvdate}[1]{\renewcommand{\cvdate}{#1}}
 \newcommand{\cvmail}[1]{\renewcommand{\cvmail}{#1}}
 \newcommand{\cvnumberphone}[1]{\renewcommand{\cvnumberphone}{#1}}
 \newcommand{\cvaddress}[1]{\renewcommand{\cvaddress}{#1}}
 \newcommand{\cvsite}[1]{\renewcommand{\cvsite}{#1}}
-\newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
+%%\newcommand{\aboutme}[1]{\renewcommand{\aboutme}{#1}}
 \newcommand{\profilepic}[1]{\renewcommand{\profilepic}{#1}}
 \newcommand{\cvname}[1]{\renewcommand{\cvname}{#1}}
 \newcommand{\cvjobtitle}[1]{\renewcommand{\cvjobtitle}{#1}}
@@ -84,17 +97,20 @@
 \newcommand*\icon[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt, fill=mainblue,mainblue,text=white] (char) {#1};}}
 
 % Command for printing skill progress bars
+\newcommand\skillwidth{0.9\lmargin}
+\newcommand\skillheight{0.2}
 \newcommand\skills[1]{ 
 	\renewcommand{\skills}{
 		\begin{tikzpicture}
 			\foreach [count=\i] \x/\y in {#1}{
-				\draw[fill=maingray,maingray] (0,\i) rectangle (6,\i+0.4);
-				\draw[fill=white,mainblue](0,\i) rectangle (\y,\i+0.4);
-				\node [above right] at (0,\i+0.4) {\x};
+				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
+				\draw[fill=white,mainblue](0,\i) rectangle (\y*\skillwidth/6,\i+\skillheight);
+				\node [above right] at (0,\i+\skillheight) {\x};
 			}
 		\end{tikzpicture}
 	}
 }
+%\newcommand\programming[1]{\skills{#1}}
 
 % Command for printing skills text
 \newcommand\skillstext[1]{ 
@@ -112,21 +128,30 @@
 %----------------------------------------------------------------------------------------
 
 \newcommand{\makeprofile}{
+
 	\begin{tikzpicture}[remember picture,overlay]
-   		\node [rectangle, fill=sidecolor, anchor=north, minimum width=9cm, minimum height=\paperheight+1cm] (box) at (-5cm,0.5cm){};
+   		\node [
+			rectangle, 
+			fill=sidecolor, 
+			anchor=north east, 
+			minimum width=\lmargin + 0.5cm, 
+			minimum height=\paperheight
+		] (box) at (-0.10\lmargin,0.5cm + \tmargin){};
 	\end{tikzpicture}
 
 	%------------------------------------------------
 
-	\begin{textblock}{6}(0.5, 0.2)
+	\begin{textblock}{0.9}(0.05, 0.1)
 			
 		%------------------------------------------------
-		
+		\vskip \tmargin
 		\ifthenelse{\equal{\profilepic}{}}{}{
 			\begin{center}
-				\begin{tikzpicture}[x=\imagescale,y=-\imagescale]
-					\clip (600/2, 567/2) circle (567/2);
-					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {\includegraphics[width=\imagewidth]{\profilepic}};
+				\begin{tikzpicture}
+					\clip (\imagewidth/2, -\imagewidth/2) circle (\imagewidth/2);
+					\node[anchor=north west, inner sep=0pt, outer sep=0pt] at (0,0) {
+						\includegraphics[width=\imagewidth]{\profilepic}
+					};
 				\end{tikzpicture}
 			\end{center}
 		}
@@ -140,33 +165,32 @@
 		{\Large\color{black!80}\cvjobtitle}
 
 		%------------------------------------------------
-
 		\renewcommand{\arraystretch}{1.6}
-		\begin{tabular}{p{0.5cm} @{\hskip 0.1cm}p{5cm}}
+		\begin{tabular}{p{0.5cm} @{\hskip 0.1cm}p{0.7\lmargin}}
 			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\large \Info} & \cvdate\\}
 			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large \Letter} & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\large \Telefon} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large \Mundus} & \cvsite\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \href{mailto:\cvmail}{\cvmail}}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \cvmail\\}
 		\end{tabular}
 
 		%------------------------------------------------
 		
-		\ifthenelse{\equal{\aboutme}{}}{}{
-			\profilesection{About me}
-			\begin{flushleft}
-				\aboutme
-			\end{flushleft}
-		}
+%		\ifthenelse{\equal{\aboutme}{}}{}{
+%			\profilesection{About me}
+%			\begin{flushleft}
+%				\aboutme
+%			\end{flushleft}
+%		}
 
 		%------------------------------------------------
 
 		\profilesection{Skills}
-
+		
 		\skills
 		\skillstext
-		\scriptsize
-		(*)[The skill scale is from 0 (Fundamental Awareness) to 6 (Expert).]
+		\tiny The skill scale is from 0 (Fundamental Awareness) to 6 (Expert)
+		
 			
 		%------------------------------------------------
 			
@@ -174,38 +198,17 @@
 }
 
 
-\usepackage[left=7.6cm,top=0.1cm,right=1cm,bottom=0.2cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+
+
 
 
 %----------------------------------------------------------------------------------------
-%	 COLOURED SECTION TITLE BOX
+%	 SECTION TITLE
 %----------------------------------------------------------------------------------------
 
 %% Command to create the rounded boxes around the first three letters of section titles
-\newcommand*\round[2]{%
-	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
-}
-%
-%\newcounter{colorCounter}
-%\newcommand{\sectioncolor}[1]{%
-%	{%
-%		\round{#1}{
-%			\ifcase\value{colorCounter}%
-%			maingray\or%
-%			mainblue\or%
-%			maingray\or%
-%			mainblue\or%
-%			maingray\or%
-%			mainblue\or%
-%			maingray\or%
-%			mainblue\or%
-% 			maingray\or%
-%			mainblue\else%
-%			maingray\fi%
-%		}%
-%	}%
-%	\stepcounter{colorCounter}%
+%\newcommand*\round[2]{%
+%	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
 %}
 
 \newcounter{sectionCounter}
