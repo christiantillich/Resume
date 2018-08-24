@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com) 
+% Re-engineered as a pandoc template by Christian Tillich
+% (christian.tillich.walker@gmail.com)
+% 
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\PassOptionsToPackage{$for(geometry)$$geometry$$sep$,$endfor$}{geometry}
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\def\tightlist{} %An odd pandoc internal that we need to include for consistency
+
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{$picture$} % Profile picture
+\cvname{$name$} % Your name
+\cvjobtitle{$occupation$} % Job title/career
+\cvdate{$birthdate$} % Date of birth
+\cvaddress{$address$} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{$phone$} % Phone number
+\cvsite{$website$} % Personal website
+\cvmail{$email$} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+%\aboutme{Test} 
+
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+\statistics{$for(statistics)$ $statistics.name$/$statistics.score$ $sep$,  $endfor$} 
+\programming{$for(programming)$ $programming.name$/$programming.score$ $sep$,  $endfor$} 
+
+%I'd like to find a way to make these arbitrary lists with arbitrary names, but this'll have to do for now. 
+
+\makeprofile % Print the sidebar
+
+$body$
+
+\end{document} 
