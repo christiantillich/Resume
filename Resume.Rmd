@@ -2,7 +2,6 @@
 picture:  pics/test.jpg
 name: "Christian Tillich"
 occupation: "Data Science"
-birthdate: June 1986
 address: "Chicago, Il."
 phone: "847-863-7162"
 website: "github/christiantillich"
@@ -28,32 +27,13 @@ output:
     # keep_tex: TRUE
     template: latex/template.tex
 geometry: 
- # - left=7.6cm 
- - left = 6.3cm
+ - left = 6.7cm
  - top = 0.5cm 
  - right = 1cm
  - bottom = 0.2cm 
  - nohead 
  - nofoot
 ---
-
-
-
-
-
-<!-- \begin{minipage}[t]{.45\textwidth}  -->
-<!-- \hfill Modeling/Math \hfill \break \break \raggedright -->
-<!-- Strong: Linear/Logistic Regression, GLMNet, Decision Trees, Random Forest, Gradient-Boosted Models, Clustering \break \break -->
-<!-- Some Exposure: Time Series, Neural Nets, Markov Models, Nonlinear Optimmization, Multivariate Statistics, Path Analysis, Other Data Mining   -->
-<!-- \end{minipage} -->
-<!-- \begin{minipage}[t]{.10\textwidth}  -->
-<!-- \hfill -->
-<!-- \end{minipage} -->
-<!-- \begin{minipage}[t]{.45\textwidth}  -->
-<!-- \hfill Programming/Tools \hfill \break \break \raggedright -->
-<!-- Strong: R, Markdown, Git, SQL (PostGres + Hive), Excel (+VBA)  \break \break -->
-<!-- Some Exposure: Bash Scripting, Python, Matlab, Mathematica, SAS, \LaTeX   -->
-<!-- \end{minipage} -->
 
 # Work Experience
 
@@ -97,20 +77,10 @@ geometry:
 
 \newpage \makeprofile
 
-## Enova Financial \hfill Fraud/Operations Analyst \hfill jun 2008 - Aug 2010
+## Enova Financial \hfill Fraud/Operations Analyst \hfill Jun 2008 - Aug 2010
 
 * Developed critical reports that allowed us to open operations after massive fraud attack. 
-* Wrote and implemented a number of consistency checks to catch operational/development errors and report back to stakeholders. 
-
-# Education
-
-## DePaul University \hfill MS Statistics \hfill 2012 - 2015
-GPA: 3.9
-
-## University of Illinois - UC \hfill BA Physics \hfill 2004 - 2008
-Minor in Philosophy
-GPA: 3.6
-
+* Wrote and implemented a number of consistency checks to catch operational and development errors and report back to stakeholders. 
 
 # Academic Research
 
@@ -125,3 +95,10 @@ GPA: 3.6
 * Wrote Unix shell-scripting to ETL raw GPS data into usable Matlab objects. 
 * Presented research to peers at 2 day conference in Oregon. 
 
+# Education
+
+## DePaul University \hfill 2012 - 2015
+MS Statistics \hfill GPA: 3.9/4.0
+
+## University of Illinois - UC \hfill 2004 - 2008
+BS Physics, Minor in Philosophy \hfill GPA: 3.6/4.0

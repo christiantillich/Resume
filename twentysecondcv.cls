@@ -108,7 +108,7 @@
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y*\skillwidth/6,\i+\skillheight);
-				\node [above right] at (0,\i+\skillheight) {\x};
+				\node [above right] at (0,\i+\skillheight) {\textsf{\x}};
 			}
 		\end{tikzpicture}
 	}
@@ -124,7 +124,7 @@
 		\end{tikzpicture}
 	}
 }
-%\newcommand\programming[1]{\skills{#1}}
+
 
 % Command for printing skills text
 \newcommand\skillstext[1]{ 
@@ -188,14 +188,6 @@
 			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \cvmail\\}
 		\end{tabular}
 
-		%------------------------------------------------
-		
-%		\ifthenelse{\equal{\aboutme}{}}{}{
-%			\profilesection{About me}
-%			\begin{flushleft}
-%				\aboutme
-%			\end{flushleft}
-%		}
 
 		%------------------------------------------------
 
@@ -205,7 +197,7 @@
 		\profilesection{Programming}
       	\programming
 
-		\footnotesize The skill scale is from 0 (Fundamental Awareness) to 6 (Expert)
+		\footnotesize The skill scale is from 0 (Used Once in College) to 6 (Expert). 3 implies ability to plan and complete average tasks within accurate and reasonable timelines.
 		
 			
 		%------------------------------------------------
@@ -222,10 +214,6 @@
 %	 SECTION TITLE
 %----------------------------------------------------------------------------------------
 
-%% Command to create the rounded boxes around the first three letters of section titles
-%\newcommand*\round[2]{%
-%	\tikz[baseline=(char.base)]\node[anchor=north west, draw,rectangle, rounded corners, inner sep=1.6pt, minimum size=5.5mm, text height=3.6mm, fill=#2,#2,text=white](char){#1};%
-%}
 
 \newcounter{sectionCounter}
 \renewcommand{\section}[1]{
