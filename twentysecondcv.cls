@@ -65,7 +65,7 @@
 
 \newlength\imagewidth
 \newlength\imagescale
-\pgfmathsetlength{\imagewidth}{0.75\lmargin}
+\pgfmathsetlength{\imagewidth}{0.70\lmargin}
 \pgfmathsetlength{\imagescale}{\imagewidth/600}
 
 \newlength{\TotalSectionLength} % Define a new length to hold the remaining line width after the section title is printed

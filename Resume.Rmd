@@ -1,5 +1,5 @@
 ---
-picture:  pics/test.jpg
+picture:  pics/resume.jpg
 name: "Christian Tillich"
 occupation: "Data Science"
 address: "Chicago, Il."
@@ -39,12 +39,16 @@ geometry:
 
 ## Avant Credit \hfill Data Science \hfill Jun 2016 - Present
 
-* Constructed key underwriting models for the portfolio.
+* Constructed machine learning models for the portfolio, including:
+    * Core underwriting model for prime population. 
+    * Competitor underwriting models using alternative consumer credit sources
+    * Unsupervised segmentation model for targeted marketing.
+    * Modeling suite to enhance refinance target logic.
 * Monitored models performance for degradation, suggested remedies and rebuilds.
-* Developed a marketing segmentation model using unsupervised learning methods.
 * Built, documented, and maintained a shared automated reporting toolset for the team. 
 * Built, documented, and maintained a tool for managing data preprocessing.
 * Contributed to a repository of shared functions and tests.
+* Trained and informally managed new team members
 
 ## Avant Credit \hfill Business Analytics \hfill Sep 2015 - June 2016
 
@@ -68,14 +72,14 @@ geometry:
 * Designed profit-maximizing loan amount optimization tool. Raised average loan amounts by $60 and expected net return by 7%. 
 * Led all analytics efforts in major legal overhaul. Salvaged $5 million in above worst-case scenarios. 
 
+\newpage \makeprofile
+
 ## Enova Financial \hfill CA/AU Business Analytics \hfill Aug 2010 - Jan 2014
 
 * Identified and fixed key failures of underwriting engine. 
 * Created LTV calculator used to optimize digital marketing allocations. 
 * Informally managed team of 2-5 analysts working on different aspects of the underwriting engine. 
 * Identified and shut down *ad hoc* fraud pockets on the two products. 
-
-\newpage \makeprofile
 
 ## Enova Financial \hfill Fraud/Operations Analyst \hfill Jun 2008 - Aug 2010
 
