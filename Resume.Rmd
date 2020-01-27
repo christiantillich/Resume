@@ -1,5 +1,5 @@
 ---
-picture:  pics/resume.jpg
+picture:  pics/resume.jpeg
 name: "Christian Tillich"
 occupation: "Data Science"
 address: "Chicago, Il."
@@ -37,7 +37,18 @@ geometry:
 
 # Work Experience
 
-## Avant Credit \hfill Data Science \hfill Jun 2016 - Present
+## Uptake \hfill Data Science: Assessments \hfill Mar 2019 - Present
+
+* Constructed machine learning models to assist manufacturing clients in diagnosing and troubleshooting common failures on assets. 
+    * Anomaly detection models to capture errant behavior on stamping presses. 
+    * Rare-event prediction models to detect chock bearing and spindle failures for well-known steel manufacturer. 
+    * Unsupervised classification to clean operator labels in work-order data.
+* Led successful engagement and conversion of clients in the Mining space. 
+* Assisted in engagement and conversion of clients in the Manufacturing space. 
+* Assisted in efforts to evaluate new technologies relevant to Data Science 
+work. 
+
+## Avant Credit \hfill Data Science \hfill Jun 2016 - Mar 2019
 
 * Constructed machine learning models for the portfolio, including:
     * Core underwriting model for prime population. 
@@ -60,6 +71,8 @@ geometry:
     * Optimal way to quantify debt to income. 
     * Reverse engineering competitive products from credit report tradelines. 
 
+\newpage \makeprofile
+
 ## Enova Financial \hfill Research & Platforms \hfill Dec 2014 - Sep 2015
 
 * Researched the efficacy of non-linear modeling strategies. 
@@ -72,8 +85,6 @@ geometry:
 * Designed profit-maximizing loan amount optimization tool. Raised average loan amounts by $60 and expected net return by 7%. 
 * Led all analytics efforts in major legal overhaul. Salvaged $5 million in above worst-case scenarios. 
 
-\newpage \makeprofile
-
 ## Enova Financial \hfill CA/AU Business Analytics \hfill Aug 2010 - Jan 2014
 
 * Identified and fixed key failures of underwriting engine. 
@@ -85,6 +96,8 @@ geometry:
 
 * Developed critical reports that allowed us to open operations after massive fraud attack. 
 * Wrote and implemented a number of consistency checks to catch operational and development errors and report back to stakeholders. 
+
+\newpage \makeprofile
 
 # Academic Research
 
