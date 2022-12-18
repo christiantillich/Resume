@@ -9,17 +9,16 @@ email: "christian.tillich.walker@gmail.com"
 statistics:
   - {name: "`General Stats & Opt`", score: 4}
   - {name: "`Bayesian Statistics`", score: 2}
-  - {name: "`Factor/Path Analysis/Markov`", score: 3}
+  - {name: "`Multivariate Methods`", score: 3}
   - {name: "`Clustering`", score: 4}
   - {name: "`Tree Methods - RF & XGB`", score: 5}
-  - {name: "`Linear/Logistic/GLMNet`", score: 6}
+  - {name: "`Regression`", score: 6}
 programming:
-  - {name: "`MatLab/Mathematica/Other`", score: 2}
-  - {name: "`Excel (+ Solver + VBA)`", score: 3}
+  - {name: "`AWS / Other Cloud`", score: 3}
   - {name: "`Git`", score: 3}
-  - {name: "`SQL (Postgres & Hive)`", score: 4}
-  - {name: "`SAS/Python`", score: 2}
-  - {name: "`Rmd & LaTeX`", score: 4}
+  - {name: "`Documentation Tools`", score: 4}
+  - {name: "`SQL`", score: 5}
+  - {name: "`Python`", score: 4}
   - {name: "`R`", score: 5}
   
 output: 
@@ -37,16 +36,28 @@ geometry:
 
 # Work Experience
 
-## Uptake \hfill Data Science: Assessments \hfill Mar 2019 - Present
+## Numerator \hfill Data Science: Panel Science \hfill May 2020 - Present
+
+* Designed and released new version of Allocation model. 
+    * Developed and maintained a library of known failures of the previous
+    methods, with detailed causal analysis of failure modes.
+    * Updated the distribution assumptions and calculation to align with industry best practices. 
+    * Developed production pipeline for model fitting, and orchestrated in Airflow.
+    * Responded rapidly to feedback during UAT, iterating through numerous design considerations and edge cases to final implementation. 
+* Designed experimental Brand Strength model, connecting survey responses to actual market behaviors for participating panelists. 
+* Developed numerous internal tools to assist with day-to-day DS functions
+    * Python wrapper for Insights API
+    * Lightweight model development framework for rapid local experimentation. 
+    * Other DS tooling to improve Snowflake workflows. 
+
+## Uptake \hfill Data Science: Assessments \hfill Mar 2019 - April 2020
 
 * Constructed machine learning models to assist manufacturing clients in diagnosing and troubleshooting common failures on assets. 
     * Anomaly detection models to capture errant behavior on stamping presses. 
     * Rare-event prediction models to detect chock bearing and spindle failures for well-known steel manufacturer. 
     * Unsupervised classification to clean operator labels in work-order data.
-* Led successful engagement and conversion of clients in the Mining space. 
-* Assisted in engagement and conversion of clients in the Manufacturing space. 
-* Assisted in efforts to evaluate new technologies relevant to Data Science 
-work. 
+* Converted client engagements in the Mining and Manufacturing space. 
+* Assisted in efforts to evaluate new technologies relevant to Data Science work. 
 
 ## Avant Credit \hfill Data Science \hfill Jun 2016 - Mar 2019
 
@@ -61,6 +72,8 @@ work.
 * Contributed to a repository of shared functions and tests.
 * Trained and informally managed new team members
 
+\newpage \makeprofile
+
 ## Avant Credit \hfill Business Analytics \hfill Sep 2015 - June 2016
 
 * Designed critical long-term risk forecasting tool.
@@ -70,8 +83,6 @@ work.
 * Performed investigative data analysis on several topics.
     * Optimal way to quantify debt to income. 
     * Reverse engineering competitive products from credit report tradelines. 
-
-\newpage \makeprofile
 
 ## Enova Financial \hfill Research & Platforms \hfill Dec 2014 - Sep 2015
 
