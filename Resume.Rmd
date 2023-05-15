@@ -38,10 +38,10 @@ geometry:
 
 ## Numerator \hfill Data Science: Panel Science \hfill May 2020 - Present
 
-* Designed AutoSeg - A marketing segmentation tool with LLM-in-loop processes for naming and describing findings.
-* Prototyped use of RNNs in extracting product features from photos. 
-* Designed new version of Allocation - a distribution based model mapping Adjusted Dollars to Adjusted Households
-* Designed experimental Brand Strength model, SEM model connecting survey responses to actual market behaviors for participating panelists. 
+* Designed AutoSeg - Instant marketing segmentation modeling with LLM-in-loop processes for naming and descriptions.
+* Prototyped RNN-based tool to extract packaging type from images of CPGs. 
+* Designed Brand Strength Model - an SEM relating survey attitudes to actual market behaviors for individual panelists.
+* Designed Allocation V4 - distribution based model relating Projected Sales to Projected Households
 * Developed numerous internal tools to assist with day-to-day DS functions
     * Python wrapper for Insights API
     * Lightweight model development framework for rapid local experimentation. 
