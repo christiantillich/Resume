@@ -1,34 +1,34 @@
 ---
 picture:  pics/resume.jpeg
 name: "Christian Tillich"
-occupation: "Data Science"
-address: "Chicago, Il."
+occupation: "Data Scientist"
+address: "https\\://goo.gl/maps/8ymuYhvJBpsiCDzp7?coh=178571&entry=tt"
 phone: "847-863-7162"
-website: "github/christiantillich"
-email: "christian.tillich.walker@gmail.com"
+website: "https\\://github.com/christiantillich/" #until I can figure out how to sanitize, we gotta escape special characters
+email: "christian.tillich.walker\\@gmail.com"
 statistics:
-  - {name: "`General Stats & Opt`", score: 4}
-  - {name: "`Bayesian Statistics`", score: 2}
-  - {name: "`Multivariate Methods`", score: 3}
-  - {name: "`Clustering`", score: 4}
-  - {name: "`Tree Methods - RF & XGB`", score: 5}
-  - {name: "`Regression`", score: 6}
+  - {name: "General Stats & Opt", score: 4}
+  - {name: "Bayesian Statistics", score: 2}
+  - {name: "Tree Modeling", score: 5}
+  - {name: "Multivariate Methods", score: 3}
+  - {name: "Segmentation", score: 4}
+  - {name: "Regression", score: 6}
 programming:
-  - {name: "`AWS / Other Cloud`", score: 3}
-  - {name: "`Git`", score: 3}
-  - {name: "`Documentation Tools`", score: 4}
-  - {name: "`SQL`", score: 5}
-  - {name: "`Python`", score: 4}
-  - {name: "`R`", score: 5}
+  - {name: "AWS & Other Cloud", score: 3}
+  - {name: "Git", score: 3}
+  - {name: "Documentation Tools", score: 4}
+  - {name: "SQL", score: 5}
+  - {name: "Python", score: 4}
+  - {name: "R", score: 5}
   
 output: 
   pdf_document:
     # keep_tex: TRUE
     template: latex/template.tex
 geometry: 
- - left = 6.7cm
- - top = 0.5cm 
- - right = 1cm
+ - left = 4.6cm #Controlls overall sidebar length
+ - top = 0.75cm 
+ - right = 1.5cm
  - bottom = 0.2cm 
  - nohead 
  - nofoot
@@ -38,13 +38,10 @@ geometry:
 
 ## Numerator \hfill Data Science: Panel Science \hfill May 2020 - Present
 
-* Designed and released new version of Allocation model. 
-    * Developed and maintained a library of known failures of the previous
-    methods, with detailed causal analysis of failure modes.
-    * Updated the distribution assumptions and calculation to align with industry best practices. 
-    * Developed production pipeline for model fitting, and orchestrated in Airflow.
-    * Responded rapidly to feedback during UAT, iterating through numerous design considerations and edge cases to final implementation. 
-* Designed experimental Brand Strength model, connecting survey responses to actual market behaviors for participating panelists. 
+* Designed AutoSeg - Instant marketing segmentation modeling with LLM-in-loop processes for naming and descriptions.
+* Prototyped RNN-based tool to extract packaging type from images of CPGs. 
+* Designed Brand Strength Model - an SEM relating survey attitudes to actual market behaviors for individual panelists.
+* Designed Allocation V4 - distribution based model relating Projected Sales to Projected Households
 * Developed numerous internal tools to assist with day-to-day DS functions
     * Python wrapper for Insights API
     * Lightweight model development framework for rapid local experimentation. 
