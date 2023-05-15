@@ -23,6 +23,7 @@
 \RequirePackage{parskip}
 \RequirePackage{geometry}
 \RequirePackage{hyperref}
+\RequirePackage{fontawesome}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
@@ -108,7 +109,7 @@
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y*\skillwidth/6,\i+\skillheight);
-				\node [above right] at (0,\i+\skillheight) {\textsf{\x}};
+				\node [above right] at (0,\i+\skillheight) {\small\textsf{\x}};
 			}
 		\end{tikzpicture}
 	}
@@ -119,7 +120,7 @@
 			\foreach [count=\i] \x/\y in {#1}{
 				\draw[fill=maingray,maingray] (0,\i) rectangle (\skillwidth,\i+\skillheight);
 				\draw[fill=white,mainblue](0,\i) rectangle (\y*\skillwidth/6,\i+\skillheight);
-				\node [above right] at (0,\i+\skillheight) {\x};
+				\node [above right] at (0,\i+\skillheight) {\small\textsf{\x}};
 			}
 		\end{tikzpicture}
 	}
@@ -157,7 +158,7 @@
 
 	\begin{textblock}{0.85}(0.05, 0.1)
 			
-		%------------------------------------------------
+		%-------PICTURE
 		\vskip \tmargin
 		\ifthenelse{\equal{\profilepic}{}}{}{
 			\begin{center}
@@ -170,31 +171,35 @@
 			\end{center}
 		}
 
-		%------------------------------------------------
-
-		{\huge\color{mainblue}\cvname\vskip 0.1cm}
-
-		%------------------------------------------------
-
-		{\Large\color{black!80}\cvjobtitle}
+		%-------NAME AND TITLE
+		\centering
+		{\Large\color{mainblue}\cvname}
+		\vskip 0.05cm
+		{\normalsize\color{black!80}\cvjobtitle}
 
 		%------------------------------------------------
 		\renewcommand{\arraystretch}{1.6}
-		\begin{tabular}{p{0.5cm} @{\hskip 0.1cm}p{0.7\lmargin}}
-			\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\large \Info} & \cvdate\\}
-			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large \Letter} & \cvaddress\\}
-			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\large \Telefon} & \cvnumberphone\\}
-			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large \Mundus} & \cvsite\\}
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \cvmail\\}
+		\begin{tabular}{c c c} %p{0.5cm} @{\hskip 0.1cm}p{0.7\lmargin}}
+			\ifthenelse{\equal{\cvmail}{}}{}{ \href{mailto:\cvmail }{\Email}}
+			\ifthenelse{\equal{\cvnumberphone}{}}{}{ \href{tel:\cvnumberphone }{\Telefon}}
+			\ifthenelse{\equal{\cvsite}{}}{}{ \href{\cvsite}{\faGithub}}
+			\ifthenelse{\equal{\cvaddress}{}}{}{ \href{\cvaddress }{\Mundus}}
+
+
+			%\ifthenelse{\equal{\cvdate}{}}{}{\textsc{\large \Info} & \cvdate\\}
+			%\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\large \Letter} & \cvaddress\\}
+			%\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\large \Telefon} & \cvnumberphone\\}
+			%\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\large \Mundus} & \cvsite\\}
+			%\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\large \Email} & \cvmail\\}
 		\end{tabular}
 
 
 		%------------------------------------------------
 
-		\profilesection{Statistics}
+		\profilesection{\centering Stats}
 		\statistics
 
-		\profilesection{Programming}
+		\profilesection{\centering Code}
       	\programming
 
 		\footnotesize The skill scale is from 0 (Used Once in College) to 6 (Expert). 3 implies ability to plan and complete average tasks within accurate and reasonable timelines.
