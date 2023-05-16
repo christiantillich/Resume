@@ -24,9 +24,13 @@
 \RequirePackage{geometry}
 \RequirePackage{hyperref}
 \RequirePackage{fontawesome}
+\RequirePackage{booktabs}
+\RequirePackage{longtable}
+\RequirePackage[tiny]{titlesec}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
+
 
 
 %----------------------------------------------------------------------------------------

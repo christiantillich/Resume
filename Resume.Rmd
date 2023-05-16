@@ -20,33 +20,40 @@ programming:
   - {name: "SQL", score: 5}
   - {name: "Python", score: 4}
   - {name: "R", score: 5}
-  
 output: 
   pdf_document:
     # keep_tex: TRUE
     template: latex/template.tex
 geometry: 
- - left = 4.6cm #Controlls overall sidebar length
- - top = 0.75cm 
- - right = 1.5cm
- - bottom = 0.2cm 
- - nohead 
- - nofoot
+  - left = 4.6cm #Controlls overall sidebar length
+  - top = 0.5cm 
+  - right = 1.75cm
+  - bottom = 0.2cm 
+  - nohead 
+  - nofoot
 ---
+# About Me  
+
+Hello, I'm an analytically-minded Data Scientist with over a decade of 
+experience in both model production, as well as deep-dive analysis making sense
+of model behavior. I prefer roles with a strong hands-on component, and prefer
+to lead through soft power and subject-matter-expertise as opposed to formal 
+leadership roles. My latest passion has been experimenting with how LLMs can 
+assist in fully-automated unsupervised learning
 
 # Work Experience
 
 ## Numerator \hfill Data Science: Panel Science \hfill May 2020 - Present
 
-* Designed AutoSeg - Instant marketing segmentation modeling with LLM-in-loop processes for naming and descriptions.
-* Prototyped RNN-based tool to extract packaging type from images of CPGs. 
-* Designed Brand Strength Model - an SEM relating survey attitudes to actual market behaviors for individual panelists.
-* Designed Allocation V4 - distribution based model relating Projected Sales to Projected Households
+* Designed AutoSeg, an Instant marketing segmentation modeling with LLM-in-loop processes for naming and descriptions. Reduces segmentation turnaround from weeks to days, and is valued at ~$2.5 million / year in the first year.
+* Prototyped RNN-based tool to extract packaging type from images of CPGs. Quoted precision at 70% with 60-70% recall. 
+* Designed Brand Strength Model - an SEM relating survey attitudes to actual market behaviors for individual panelists. Fully automated process valued at $50k per engagement.
+* Designed Allocation V4 - distribution based model relating Projected Sales to Projected Households. 
 * Developed numerous internal tools to assist with day-to-day DS functions
     * Python wrapper for Insights API
     * Lightweight model development framework for rapid local experimentation. 
     * Other DS tooling to improve Snowflake workflows. 
-
+    
 ## Uptake \hfill Data Science: Assessments \hfill Mar 2019 - April 2020
 
 * Constructed machine learning models to assist manufacturing clients in diagnosing and troubleshooting common failures on assets. 
@@ -64,9 +71,7 @@ geometry:
     * Unsupervised segmentation model for targeted marketing.
     * Modeling suite to enhance refinance target logic.
 * Monitored models performance for degradation, suggested remedies and rebuilds.
-* Built, documented, and maintained a shared automated reporting toolset for the team. 
-* Built, documented, and maintained a tool for managing data preprocessing.
-* Contributed to a repository of shared functions and tests.
+* Built, documented, and maintained a shared automated reporting/preprocessing toolsets for the team. 
 * Trained and informally managed new team members
 
 \newpage \makeprofile
@@ -122,8 +127,9 @@ geometry:
 
 # Education
 
-## DePaul University \hfill 2012 - 2015
-MS Statistics \hfill GPA: 3.9/4.0
-
-## University of Illinois - UC \hfill 2004 - 2008
-BS Physics, Minor in Philosophy \hfill GPA: 3.6/4.0
+-------------------------------------------------------------------------------
+University                        Degree              GPA           Years      
+--------------------------------- ------------------- ------------- -----------
+DePaul University                 MS Statistics       3.9/4.0       2012 - 2015
+University of Illinois - UC       BS Physics          3.6/4.0       2004 - 2008
+-------------------------------------------------------------------------------
