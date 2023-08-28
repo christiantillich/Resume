@@ -20,6 +20,7 @@ programming:
   - {name: "SQL", score: 5}
   - {name: "Python", score: 4}
   - {name: "R", score: 5}
+  - {name: "SAS", score: 3}
 output: 
   pdf_document:
     # keep_tex: TRUE
