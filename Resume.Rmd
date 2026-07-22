@@ -8,18 +8,18 @@ website: "github/christiantillich"
 email: "christian.tillich.walker@gmail.com"
 statistics:
   - {name: "`General Stats & Opt`", score: 4}
-  - {name: "`Bayesian Statistics`", score: 2}
-  - {name: "`Multivariate Methods`", score: 3}
-  - {name: "`Clustering`", score: 4}
+  - {name: "`Segmentation / Clustering`", score: 4}
   - {name: "`Tree Methods - RF & XGB`", score: 5}
   - {name: "`Regression`", score: 6}
+  - {name: "`Multivariate Methods`", score: 3}
+  - {name: "`Bayesian Methods`", score: 2}
 programming:
   - {name: "`AWS / Other Cloud`", score: 3}
-  - {name: "`Git`", score: 3}
-  - {name: "`Documentation Tools`", score: 4}
-  - {name: "`SQL`", score: 5}
-  - {name: "`Python`", score: 4}
-  - {name: "`R`", score: 5}
+  - {name: "`Git`", score: 4}
+  - {name: "`Presentation`", score: 6}
+  - {name: "`SQL`", score: 6}
+  - {name: "`Python`", score: 5}
+  - {name: "`R`", score: 4}
   
 output: 
   pdf_document:
@@ -34,21 +34,47 @@ geometry:
  - nofoot
 ---
 
+# Profile
+
+I'm a Senior Data Scientist who gets excited about providing clear and honest
+interpretation of data. I've developed and deployed predictive solutions both
+Consumer Finance and Market Intelligence domains. My current projects focus on
+AI-assisted modeling tasks, model development frameworks, and agentic systems.
+I'm currently seeking a role where the things I build improves the lives of
+others. 
+
+# Patents
+
+* Tillich, Christian. (Pending). Methods and Apparatus for Generating
+  Intelligible Data Segments with Large Language Models (U.S. Patent No.
+  19/307,575). U.S. Patent and Trademark Office.
+
 # Work Experience
 
-## Numerator \hfill Data Science: Panel Science \hfill May 2020 - Present
+## Numerator \hfill Data Science: Product DS \hfill May 2020 - Present
 
-* Designed and released new version of Allocation model. 
-    * Developed and maintained a library of known failures of the previous
-    methods, with detailed causal analysis of failure modes.
-    * Updated the distribution assumptions and calculation to align with industry best practices. 
-    * Developed production pipeline for model fitting, and orchestrated in Airflow.
-    * Responded rapidly to feedback during UAT, iterating through numerous design considerations and edge cases to final implementation. 
-* Designed experimental Brand Strength model, connecting survey responses to actual market behaviors for participating panelists. 
+* Actively developing LayerScore, a ML method for similarity-scoring two JSON
+  blobs representing the same receipt transcription. 
+* Developed and deployed AutoSeg, a fully-automated marketing segmentation solution. 
+    * Engaged with stakeholders on painpoints of custom segmentations. 
+    * Developed modern ML workflow to perform one-size-fits-most process for any subset of CPG goods.
+    * Engineered AI-assisted interpretation of model findings, reducing segmentation turnaround time from months to hours. 
+    * Developing beta program for midmarket clients who would otherwise not engage with custom segmentations. 
+* Developed and deployed eployed Receipt Duplication Model to remove ~8k duplicate receipt matches per day from transcription records. 
+    * Engaged with stakeholders on problematic trends in duplicate receipts impacting data quality.
+    * Identified shortfalls in current methods, especially with online grocery substitution.
+    * Created model to assess P(pair is duplicate | transcription features).
+    * Worked with QA to validate impact in spite of partially censored target variable.
+    * Model successfully deployed July 2024 with accuracy ~85%.
+* Additional Modeling Experiments included:
+    * Allocation v4, a method of assigning spend adjustments to households
+    * Brand Strength model, a SEM tieing survey responses to actual market behaviors for participating panelists. 
 * Developed numerous internal tools to assist with day-to-day DS functions
-    * Python wrapper for Insights API
+    * Python wrapper for Insights API to automate consultant tasks. Reduced execution time from hours to minutes while also reducing error.
     * Lightweight model development framework for rapid local experimentation. 
     * Other DS tooling to improve Snowflake workflows. 
+
+\newpage \makeprofile
 
 ## Uptake \hfill Data Science: Assessments \hfill Mar 2019 - April 2020
 
@@ -56,8 +82,6 @@ geometry:
     * Anomaly detection models to capture errant behavior on stamping presses. 
     * Rare-event prediction models to detect chock bearing and spindle failures for well-known steel manufacturer. 
     * Unsupervised classification to clean operator labels in work-order data.
-* Converted client engagements in the Mining and Manufacturing space. 
-* Assisted in efforts to evaluate new technologies relevant to Data Science work. 
 
 ## Avant Credit \hfill Data Science \hfill Jun 2016 - Mar 2019
 
@@ -72,8 +96,6 @@ geometry:
 * Contributed to a repository of shared functions and tests.
 * Trained and informally managed new team members
 
-\newpage \makeprofile
-
 ## Avant Credit \hfill Business Analytics \hfill Sep 2015 - June 2016
 
 * Designed critical long-term risk forecasting tool.
@@ -83,6 +105,8 @@ geometry:
 * Performed investigative data analysis on several topics.
     * Optimal way to quantify debt to income. 
     * Reverse engineering competitive products from credit report tradelines. 
+
+\newpage \makeprofile
 
 ## Enova Financial \hfill Research & Platforms \hfill Dec 2014 - Sep 2015
 
