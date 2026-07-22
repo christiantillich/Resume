@@ -1,11 +1,11 @@
 ---
 picture:  pics/resume.jpeg
 name: "Christian Tillich"
-occupation: "Data Science"
-address: "Chicago, Il."
+occupation: "Data Scientist"
+address: "https\\://goo.gl/maps/8ymuYhvJBpsiCDzp7?coh=178571&entry=tt"
 phone: "847-863-7162"
-website: "github/christiantillich"
-email: "christian.tillich.walker@gmail.com"
+website: "https\\://github.com/christiantillich/" #until I can figure out how to sanitize, we gotta escape special characters
+email: "christian.tillich.walker\\@gmail.com"
 statistics:
   - {name: "`General Stats & Opt`", score: 4}
   - {name: "`Segmentation / Clustering`", score: 4}
@@ -26,13 +26,21 @@ output:
     # keep_tex: TRUE
     template: latex/template.tex
 geometry: 
- - left = 6.7cm
- - top = 0.5cm 
- - right = 1cm
- - bottom = 0.2cm 
- - nohead 
- - nofoot
+  - left = 4.6cm #Controlls overall sidebar length
+  - top = 0.5cm 
+  - right = 1.75cm
+  - bottom = 0.2cm 
+  - nohead 
+  - nofoot
 ---
+# About Me  
+
+Hello, I'm an analytically-minded Data Scientist with over a decade of 
+experience in both model production, as well as deep-dive analysis making sense
+of model behavior. I prefer roles with a strong hands-on component, and prefer
+to lead through soft power and subject-matter-expertise as opposed to formal 
+leadership roles. My latest passion has been experimenting with how LLMs can 
+assist in fully-automated unsupervised learning
 
 # Profile
 
@@ -91,9 +99,7 @@ others.
     * Unsupervised segmentation model for targeted marketing.
     * Modeling suite to enhance refinance target logic.
 * Monitored models performance for degradation, suggested remedies and rebuilds.
-* Built, documented, and maintained a shared automated reporting toolset for the team. 
-* Built, documented, and maintained a tool for managing data preprocessing.
-* Contributed to a repository of shared functions and tests.
+* Built, documented, and maintained a shared automated reporting/preprocessing toolsets for the team. 
 * Trained and informally managed new team members
 
 ## Avant Credit \hfill Business Analytics \hfill Sep 2015 - June 2016
@@ -149,8 +155,9 @@ others.
 
 # Education
 
-## DePaul University \hfill 2012 - 2015
-MS Statistics \hfill GPA: 3.9/4.0
-
-## University of Illinois - UC \hfill 2004 - 2008
-BS Physics, Minor in Philosophy \hfill GPA: 3.6/4.0
+-------------------------------------------------------------------------------
+University                        Degree              GPA           Years      
+--------------------------------- ------------------- ------------- -----------
+DePaul University                 MS Statistics       3.9/4.0       2012 - 2015
+University of Illinois - UC       BS Physics          3.6/4.0       2004 - 2008
+-------------------------------------------------------------------------------
