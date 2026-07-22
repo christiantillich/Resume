@@ -8,9 +8,8 @@ website: "https\\://github.com/christiantillich/" #until I can figure out how to
 email: "christian.tillich.walker\\@gmail.com"
 statistics:
   - {name: "`General Stats & Opt`", score: 4}
-  - {name: "`Segmentation / Clustering`", score: 4}
-  - {name: "`Tree Methods - RF & XGB`", score: 5}
-  - {name: "`Regression`", score: 6}
+  - {name: "`Segments / Clustering`", score: 4}
+  - {name: "`Trad. Regression`", score: 6}
   - {name: "`Multivariate Methods`", score: 3}
   - {name: "`Bayesian Methods`", score: 2}
 programming:
